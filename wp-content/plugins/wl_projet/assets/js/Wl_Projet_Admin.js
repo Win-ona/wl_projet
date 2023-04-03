@@ -8,8 +8,8 @@ jQuery( document ).ready(function() {
         const datas =
             {
                 action: "changeDisponibility",
-                security: lmprojetscript.security,
-                idDisponible: jQuery("#countries").val(),
+                security: Wlprojetscript.security,
+                idDisponible: jQuery("#pays").val(),
             };
 
         jQuery.post(ajaxurl, datas, function (rs)
@@ -35,7 +35,7 @@ jQuery( document ).ready(function() {
             datas =
                 {
                     'action': "changeAccessibility",
-                    'security': lmprojetscript.security,
+                    'security': Wlprojetscript.security,
                     'updateAccess':  jQuery(this).data('id'),
                     'valueAccess' : 1
                 };
@@ -43,7 +43,7 @@ jQuery( document ).ready(function() {
             datas =
                 {
                     'action': "changeAccessibility",
-                    'security': lmprojetscript.security,
+                    'security': Wlprojetscript.security,
                     'updateAccess':  jQuery(this).data('id'),
                     'valueAccess' : 0
                 };
@@ -70,7 +70,7 @@ jQuery( document ).ready(function() {
         const datas =
             {
                 'action': "changeNote",
-                'security': lmprojetscript.security,
+                'security': Wlprojetscript.security,
                 'idNote':  jQuery(this).data('id'),
                 'valueNote': jQuery(this).val()
             };

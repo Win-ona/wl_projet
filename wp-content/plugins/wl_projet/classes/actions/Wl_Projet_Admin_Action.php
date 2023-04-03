@@ -25,7 +25,7 @@ class Wl_Projet_Admin_Action
             $$key = $value;
 
         $Wl_Projet_Crud_Index= new Wl_Projet_Crud_Index();
-        $response = $Wl_Projet_Crud_Index->update_disponibile($_REQUEST['idDisponible']);
+        $response = $Wl_Projet_Crud_Index->update_disponibility($_REQUEST['idDisponible']);
 
         print $response;
 

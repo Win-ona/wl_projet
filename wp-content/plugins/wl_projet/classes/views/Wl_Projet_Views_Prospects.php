@@ -49,7 +49,7 @@ class Wl_Projet_Views_Prospects
                         <tr>
                             <?php if (defined('WL_PROJET_BASENAME')) : ?>
                                 <td>
-                                    <a href="<?php print plugins_url(WL_PROJET_BASENAME . '/classes/export/Wl_Insset_Export_XML.php'); ?>" class="button button-secondary">
+                                    <a href="<?php print plugins_url(WL_PROJET_PLUGIN_NAME . '/classes/export/Wl_Projet_Export_XML.php'); ?>" class="button button-secondary">
                                         Export CSV
                                     </a>
                                 </td>

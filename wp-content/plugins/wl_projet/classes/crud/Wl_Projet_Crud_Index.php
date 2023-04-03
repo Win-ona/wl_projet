@@ -13,9 +13,9 @@ class Wl_Projet_Crud_Index
 
         return $wpdb->get_results($sql, 'ARRAY_A');
     }
-    static public function update_disponibility($idDisponibilité ){
+    static public function update_disponibility($idDisponible ){
 
-        if (!$idDisponibilité)
+        if (!$idDisponible)
             return;
 
 
@@ -29,10 +29,10 @@ class Wl_Projet_Crud_Index
 
         if ($Pays_non_disponible)
             foreach ($Pays_non_disponible as $value)
-                if($value !==$idDisponibilité)
+                if($value !==$idDisponible)
                     $wpdb->update($table_name_config, array('disponibilité' => 0), array('id' => $value['id']));
 
-        foreach ($idDisponibilité as $id)
+        foreach ($idDisponible as $id)
             $wpdb->update($table_name_config, array('disponibilité' => 1), array('id' => $id));
 
         return "Mise à jour effectuée avec succès !";

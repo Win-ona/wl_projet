@@ -21,7 +21,11 @@ class Wl_Projet_Shortcodes_Form_selection
         endforeach;
 
         //fomulaire en html pour sélectionner les pays
-        return "<form id='Wl_Projet_pays_selectionnes'>
+        return "
+            <script src=\"https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js\</script>
+            <script id=\"Script_Modal\" type=\"text/x-handlebars-template\" src=\"".plugins_url(WL_PROJET_PLUGIN_NAME."/assets/Handlebars/Handlebars.hbs")."\"></script>
+    
+        <form id='Wl_Projet_pays_selectionnes'>
             
         <h3>Liste des pays</h3>
         
@@ -67,8 +71,15 @@ class Wl_Projet_Shortcodes_Form_selection
 
         
             <button class='disable-select-pays' id='Wl_Projet_pays_selectionnes-submit'>Validez mes choix</button>
-        </form>";
+        </form>
+        
+        <ul class='hd_pays_list_container'>
+        </ul>
+            <input type=\"button\" id=\"hd-form-final\" value=\"Oui,je suis d'accord\"></input>
+            <div id='handlebarsModalBox'></div>
 
+    ";
 
     }
+
 }

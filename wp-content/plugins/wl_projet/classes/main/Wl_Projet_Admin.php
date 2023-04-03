@@ -81,6 +81,7 @@ class Wl_Projet_Admin
     }
 
     public function Wl_Projet_Prospects(){
-        print('test');
+            $Wl_Projet_Views_Prospects = new Wl_Projet_Views_Prospects();
+            return $Wl_Projet_Views_Prospects->display();//création de la page Liste Prospect sur wordpress
     }
 }

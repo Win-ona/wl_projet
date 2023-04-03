@@ -27,17 +27,16 @@ jQuery( document ).ready(function() {
             processData: false,
             data: formData,
             type: 'post',
-            success: function (rs, textStatus, jqXHR) {
-                console.log(rs);
-                jQuery("#loading").hide();
-                return false;
-            }
-        })
+            success: function (rs, textStatus, jqXHR)
+            {
 
-        return false
+                //aller à la page suivante
+                window.sessionStorage.setItem("Authorisation", "step1,step2");
+                window.location = "http://localhost/wordpress/wordpress/2023/03/29/formulaire-de-selection-pays/";
+            },
+        });
+    })
 
-
-    });
 
     //boucle for pour passer de du pays selectionné 1 au pays sélectioné 5
     for (let i = 1; i < 5; i++) {
