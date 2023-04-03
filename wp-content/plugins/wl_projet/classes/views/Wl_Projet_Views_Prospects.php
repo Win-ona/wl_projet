@@ -1,11 +1,11 @@
 <?php
 
-class Wl_Projet_Prospects
+class Wl_Projet_Views_Prospects
 {
     public function display(){
 
 
-        $Wp_Projet_Liste = new Wl_Projet_Prospects(); //création de la table prospects
+        $Wp_Projet_Liste = new Wl_Projet_Views_Prospects(); //création de la table prospects
 
         $tempscreen = get_current_screen();
         $this->_screen = $tempscreen->base;

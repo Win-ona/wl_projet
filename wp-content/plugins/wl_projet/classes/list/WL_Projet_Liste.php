@@ -5,7 +5,7 @@ if (!class_exists('WP_List_Table')) {
     require_once(ABSPATH .'wp-admin/includes/class-wp-list-table.php');
 }
 
-class WL_Porojet_Liste extends WP_List_Table
+class WL_Projet_Liste extends WP_List_Table
 {
     public $_program;
     public $_screen;
@@ -146,7 +146,7 @@ class WL_Porojet_Liste extends WP_List_Table
     //ligne grisée si non accessible
     public function single_row($item)
     {
-        $cssClass = ($item['disponibilté'] == 1) ? '' : 'hd_grid_disable_row';
+        $cssClass = ($item['disponibilité'] == 1) ? '' : 'hd_grid_disable_row';
         echo '<tr class="' . $cssClass . '">';
         $this->single_row_columns($item);
         echo '</tr>';
