@@ -73,7 +73,7 @@ class Wl_Projet_Shortcodes_Form_selection
             <button class='disable-select-pays' id='Wl_Projet_pays_selectionnes-submit'>Validez mes choix</button>
         </form>
         
-        <ul class='hd_pays_list_container'>
+        <ul class='Wl_pays_list_container'>
         </ul>
             <input type=\"button\" id=\"hd-form-final\" value=\"Oui,je suis d'accord\"></input>
             <div id='handlebarsModalBox'></div>

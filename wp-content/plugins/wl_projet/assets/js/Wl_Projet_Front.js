@@ -32,7 +32,7 @@ jQuery( document ).ready(function() {
 
                 //aller à la page suivante
                 window.sessionStorage.setItem("Authorisation", "step1,step2");
-                window.location = "http://localhost/wordpress/wordpress/2023/03/29/formulaire-de-selection-pays/";
+                window.location.replace("://localhost/wordpress/wordpress/2023/03/29/formulaire-de-selection-pays/?id="+rs);
             },
         });
     })

@@ -1,0 +1,71 @@
+/*mixin.less*/
+.text-overflow() {
+  -webkit-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.rounded( @radius: 7px ) when (isnumber(@radius)) {
+    -webkit-border-radius: @radius;
+    -khtml-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.opacity(@opacity: .5) when (isnumber(@opacity)) {
+    -webkit-opacity: @opacity;
+    -khtml-opacity: @opacity;
+    -moz-opacity: @opacity;
+    opacity: @opacity;
+    @opperc: @opacity * 100;
+	-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+	filter: ~"alpha(opacity=@{opperc})";
+}
+
+.box-sizing(@sizing: border-box) {
+    -webkit-box-sizing: @sizing;
+    -moz-box-sizing: @sizing;
+    -ms-box-sizing: @sizing;
+    box-sizing: @sizing;
+}
+
+.hide() {
+	position: fixed;
+	z-index: -1;
+	top: -99999vh;
+	left: -9999vw;
+}
+
+.show() {
+	position: relative;
+	z-index: auto;
+	top: auto;
+	left: auto;
+}
+
+.fit() {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.grayscale() {
+    -webkit-filter: grayscale(1) blur(1px);
+    -moz-filter: grayscale(1) blur(1px);
+    -ms-filter: grayscale(1) blur(1px);
+    -o-filter: grayscale(1) blur(1px);
+    filter: grayscale(1) blur(1px);
+    .opacity(.5);
+}
+
+.transition(@what: all, @speed: .1s) {
+    -webkit-transition: @what @speed ease-in 0s;
+    -moz-transition: @what @speed ease-in 0s;
+    -ms-transition: @what @speed ease-in 0s;
+    -o-transition: @what @speed ease-in 0s;
+    transition: @what @speed ease-in 0s;
+}

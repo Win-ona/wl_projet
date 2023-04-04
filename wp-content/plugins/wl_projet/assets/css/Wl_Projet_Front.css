@@ -1,0 +1,108 @@
+@import "Wl_Projet_Front.css";
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fontawesome-free-6.2.1-web/webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fontawesome-free-6.2.1-web/webfonts/fa-regular-400.ttf") format("truetype");
+
+}
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../webfonts/fontawesome-free-6.2.1-web/webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fontawesome-free-6.2.1-web/webfonts/fa-solid-900.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-display: block;
+  font-weight: 400;
+  src: url("../webfonts/fontawesome-free-6.2.1-web/webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fontawesome-free-6.2.1-web/webfonts/fa-brands-400.ttf") format("truetype");
+}
+#hd-form-pays {
+  float: right;
+  margin-right: 20vw;
+}
+@media screen and (max-width: 960px) {
+  #hd-form-pays {
+    margin-right: 0vw;
+  }
+}
+.hd_pays_list_container {
+  padding: 2vh 20vw;
+}
+@media screen and (max-width: 960px) {
+  .hd_pays_list_container {
+    padding: 2vh 0vw;
+  }
+}
+.hd_pays_list_container li {
+  padding: 5vh 5vw;
+  margin: 3vh 0;
+  border: 2px solid black;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.hd_pays_list_container li:hover {
+  background-color: black;
+  color: cornsilk;
+  transform: scale(1.1);
+}
+.hd_pays_list_container li span:last-child {
+  margin-right: 30px;
+}
+.hd_pays_list_container li span:before {
+  font-size: 1.25em;
+  font-family: "FontAwesome";
+  font-weight: 900;
+  display: inline-block;
+}
+.hd_pays_list_container li #handlebarsModalBox {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #000000;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+.hd_pays_list_container li .modalboxContent {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.hd_pays_list_container li .show-modal-box {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+.hd_pays_list_container li .map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 0;
+}
+@media screen and (max-width: 780px) {
+  .hd_pays_list_container li .map-container {
+    flex-wrap: wrap;
+    margin-bottom: 7vh;
+  }
+  .hd_pays_list_container li .map-container #hd-pays-map {
+    width: 100%;
+  }
+}

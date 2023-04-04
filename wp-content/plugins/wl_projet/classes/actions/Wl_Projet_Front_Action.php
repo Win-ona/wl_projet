@@ -24,7 +24,7 @@ class Wl_Projet_Front_Action {
             if (!in_array($key, ['action','security']))
                 $Wl_Projet_Crud_Index->ajout_data($lastId, $key, $value);
 
-        print "Inscrit";
+        print $LastId;
         exit;
     }
 
